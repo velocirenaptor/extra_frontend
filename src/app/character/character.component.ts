@@ -19,6 +19,7 @@ const CREATE_CHARACTER = gql`
   standalone: true,
   imports: [FormsModule],
   template: './character.component.html',
+  styleUrls: ['./character.component.css']
 })
 export class CharacterComponent {
   newCharacter = { name: '', source: '', picture: '', description: '' };

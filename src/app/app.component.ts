@@ -5,7 +5,7 @@ import { CharacterComponent } from './character/character.component';
   selector: 'app-root',
   standalone: true,
   imports: [CharacterComponent],
-  template: `<app-character></app-character>`,
+  template: './app.component.html',
 })
 export class AppComponent {
   title = 'extra-angular';
