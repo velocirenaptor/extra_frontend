@@ -1,0 +1,26 @@
+<div *ngFor="let character of characters" class="character-card">
+    <img [src]="character.picture" alt="{{ character.name }}" />
+    <h2>{{ character.name }}</h2>
+    <p><strong>Source:</strong> {{ character.source }}</p>
+    <p>{{ character.description }}</p>
+  </div>
+
+  <div>
+    <h1>Create a New Character</h1>
+    <form (ngSubmit)="createCharacter()">
+      <label for="name">Name:</label>
+      <input id="name" [(ngModel)]="newCharacter.name" name="name" required />
+  
+      <label for="source">Source:</label>
+      <input id="source" [(ngModel)]="newCharacter.source" name="source" required />
+  
+      <label for="picture">Picture URL:</label>
+      <input id="picture" [(ngModel)]="newCharacter.picture" name="picture" />
+  
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="newCharacter.description" name="description"></textarea>
+  
+      <button type="submit">Create</button>
+    </form>
+  </div>
+  
